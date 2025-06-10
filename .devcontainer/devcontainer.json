@@ -1,0 +1,22 @@
+{
+  "name": "maddpg-mpe-pytorch Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "runArgs": ["--gpus", "all"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "postCreateCommand": "./.devcontainer/setup.sh",
+  "remoteUser": "root",
+  "workspaceFolder": "/workspaces/maddpg-mpe-pytorch"
+}
